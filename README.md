@@ -9,7 +9,7 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 
 - O ID das tabelas relativas ao Identity devem ser inteiros ao invés de strings (guid).
 
-- Autenticaç ão e autorização já estão implementados na API via JWT, deve ser adicionado estas validações também no método “Get” do controller “Product”.
+- Autenticação e autorização já estão implementados na API via JWT, deve ser adicionado estas validações também no método “Get” do controller “Product”.
  
 ## ⏳ Executando projeto
 
