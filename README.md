@@ -8,22 +8,16 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 - O ID das tabelas relativas ao Identity devem ser inteiros ao invés de strings (guid).
 
 - Autenticaç ão e autorização já estão implementados na API via JWT, deve ser adicionado estas validações também no método “Get” do controller “Product”.
-
-## Regras
-
-- Prazo: (Analise o código e nos informe um prazo para entrega.)
-- Forma de Entrega: Código em repositório GitHub (liberar acesso para os usuários “fcsvr” e “aFurtadoDev” do GitHub)
  
 ## Executando projeto
 
 - Clone este repositório e extraia-o para uma pasta.
 - Altere as strings de conexão para o aplicativo e a identidade no WebApi / appsettings.json - (Projeto WebApi)
-- Execute os seguintes comandos no Powershell no diretório do WebApi Projecct.
-
-- restauração dotnet
-- dotnet ef database update --context ApplicationDbContext
-- dotnet ef database update --context IdentityContext
-- Execute a solução usando o Visual Studio 2019
+- Execute os seguintes comandos no CLI do .NET no diretório do WebApi Projecct.
+ - restauração dotnet
+ - dotnet ef database update --context ApplicationDbContext
+ - dotnet ef database update --context IdentityContext
+ - Execute a solução usando o Visual Studio 2019
 
 ## Solução de problemas
 
