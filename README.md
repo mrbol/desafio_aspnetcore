@@ -29,6 +29,22 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 
 - Problema ao executar dotnet ef database update --context ApplicationDbContext <br/>
 <b>R:</b> executar comando no powershell dotnet tool install --global dotnet-ef e depois configurar a variavel de ambiente do windows Você precisa adicionar %USERPROFILE%\.dotnet\toolsao PATH.
+
+### Passos especificos para alterar IdentityUser e IdentityRole
+
+- Primeiro estenda a IdenityUserclasse de classe da seguinte maneira para que você possa adicionar propriedades personalizadas: <br/>
+<b>R:</b> public class ApplicationUser : IdentityUser<int>{}
+
+- Em seguida, estenda a IdentityRoleclasse a seguir se você usar Roleno aplicativo também. Você pode mantê-lo com segurança, mesmo que não queira usá-lo: <br/>
+ <b>R:</b> public class ApplicationRole : IdentityRole<int>{}
+ 
+- Agora você IdentityContext deve ser o seguinte:<br/>
+<b>R:<b>     public class IdentityContext :  IdentityDbContext<ApplicationUser, ApplicationRole,int>
+
+- Agora em seu AddIdentityInfrastructure método da ServiceExtensions da seguinte maneira:  <br/>
+<b>R:</b> services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
+ 
+<b>R:</b> Alterar na AccountService alterar IdentityRole por ApplicationRole
  
  # ASP.NET Core WebApi - Clean Architecture
 
