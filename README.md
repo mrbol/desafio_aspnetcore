@@ -44,7 +44,7 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 - Agora em seu AddIdentityInfrastructure método da ServiceExtensions da seguinte maneira:  <br/>
 <b>R:</b> services.AddIdentity<ApplicationUser, ApplicationRole>().AddEntityFrameworkStores<IdentityContext>().AddDefaultTokenProviders();
  
-<b>R:</b> Alterar na AccountService alterar IdentityRole por ApplicationRole
+- Alterar na AccountService alterar IdentityRole por ApplicationRole
  
  # ASP.NET Core WebApi - Clean Architecture
 
