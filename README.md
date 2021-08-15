@@ -2,7 +2,7 @@
 
 ## Sobre o desafio
 
-A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.com/iammukeshm/CleanArchitecture.WebApi) . <br/><br/>
+A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.com/iammukeshm/CleanArchitecture.WebApi) . <br/>
 - Customizar a nomenclatura padrão das tabelas e colunas (não precisam ser todas) para português e de nomenclatura padronizada. (Ex. tabelas = TB_XXX). Ao menos uma tabela e coluna. (Deve ser feito de forma que se gerar o migrations novamente gere com os novos nomes)
 
 - O ID das tabelas relativas ao Identity devem ser inteiros ao invés de strings (guid).
