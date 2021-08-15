@@ -14,7 +14,7 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 - Clone este repositório e extraia-o para uma pasta.
 - Altere as strings de conexão para o aplicativo e a identidade no WebApi / appsettings.json - (Projeto WebApi)
 
-###Execute os seguintes comandos no CLI do .NET no diretório do WebApi Projecct.
+### Execute os seguintes comandos no CLI do .NET no diretório do WebApi Projecct.
  - restauração dotnet
  - dotnet ef database update --context ApplicationDbContext
  - dotnet ef database update --context IdentityContext
