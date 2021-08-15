@@ -1,3 +1,33 @@
+# 🏆 Desafio .NET
+
+## 📄 Sobre o desafio
+
+A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.com/iammukeshm/CleanArchitecture.WebApi) . <br/>
+- Customizar a nomenclatura padrão das tabelas e colunas (não precisam ser todas) para português e de nomenclatura padronizada. (Ex. tabelas = TB_XXX). Ao menos uma tabela e coluna. (Deve ser feito de forma que se gerar o migrations novamente gere com os novos nomes)
+
+- O ID das tabelas relativas ao Identity devem ser inteiros ao invés de strings (guid).
+
+- Autenticaç ão e autorização já estão implementados na API via JWT, deve ser adicionado estas validações também no método “Get” do controller “Product”.
+ 
+## ⏳ Executando projeto
+
+- Clone este repositório e extraia-o para uma pasta.
+- Altere as strings de conexão para o aplicativo e a identidade no WebApi / appsettings.json - (Projeto WebApi)
+
+### Execute os seguintes comandos no CLI do .NET no diretório do WebApi Projecct.
+ - restauração dotnet
+ - dotnet ef database update --context ApplicationDbContext
+ - dotnet ef database update --context IdentityContext
+ - Execute a solução usando o Visual Studio 2019
+
+## 🛠 Solução de problemas
+
+- Falha de carregamento de packages ao executar dotnet restore <br/>
+<b>R:</b> dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org 
+
+- Problema ao executar dotnet ef database update --context ApplicationDbContext <br/>
+<b>R:</b> executar comando no powershell dotnet tool install --global dotnet-ef e depois configurar a variavel de ambiente do windows Você precisa adicionar %USERPROFILE%\.dotnet\toolsao PATH.
+ 
  # ASP.NET Core WebApi - Clean Architecture
 
 ![.NET Core](https://github.com/iammukeshm/CleanArchitecture.WebApi/workflows/.NET%20Core/badge.svg?branch=master)
