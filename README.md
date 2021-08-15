@@ -1,6 +1,6 @@
-# Desafio .NET
+# 🏆 Desafio .NET
 
-## Sobre o desafio
+## 📄 Sobre o desafio
 
 A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.com/iammukeshm/CleanArchitecture.WebApi) . <br/>
 - Customizar a nomenclatura padrão das tabelas e colunas (não precisam ser todas) para português e de nomenclatura padronizada. (Ex. tabelas = TB_XXX). Ao menos uma tabela e coluna. (Deve ser feito de forma que se gerar o migrations novamente gere com os novos nomes)
@@ -9,7 +9,7 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 
 - Autenticaç ão e autorização já estão implementados na API via JWT, deve ser adicionado estas validações também no método “Get” do controller “Product”.
  
-## Executando projeto
+## ⏳ Executando projeto
 
 - Clone este repositório e extraia-o para uma pasta.
 - Altere as strings de conexão para o aplicativo e a identidade no WebApi / appsettings.json - (Projeto WebApi)
@@ -20,7 +20,7 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
  - dotnet ef database update --context IdentityContext
  - Execute a solução usando o Visual Studio 2019
 
-## Solução de problemas
+## 🛠 Solução de problemas
 
 - Falha de carregamento de packages ao executar dotnet restore <br/>
 <b>R:</b> dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org 
