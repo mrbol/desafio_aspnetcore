@@ -23,10 +23,10 @@ A partir do template  ASP.NET Core WebApi - Clean Architecture (https://github.c
 ## Solução de problemas
 
 - Falha de carregamento de packages ao executar dotnet restore <br/>
-<b>R:</> dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org 
+<b>R:</b> dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org 
 
 - Problema ao executar dotnet ef database update --context ApplicationDbContext <br/>
-<b>R:</> executar comando no powershell dotnet tool install --global dotnet-ef e depois configurar a variavel de ambiente do windows Você precisa adicionar %USERPROFILE%\.dotnet\toolsao PATH.
+<b>R:</b> executar comando no powershell dotnet tool install --global dotnet-ef e depois configurar a variavel de ambiente do windows Você precisa adicionar %USERPROFILE%\.dotnet\toolsao PATH.
  
  # ASP.NET Core WebApi - Clean Architecture
 
