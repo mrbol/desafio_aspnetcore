@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Infrastructure.Identity.Contexts
 {
-    public class IdentityContext : IdentityDbContext<ApplicationUser>
+    public class IdentityContext : IdentityDbContext<ApplicationUser, ApplicationRole, int>
     {
         public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
         {
@@ -19,35 +19,37 @@ namespace Infrastructure.Identity.Contexts
             builder.HasDefaultSchema("Identity");
             builder.Entity<ApplicationUser>(entity =>
             {
-                entity.ToTable(name: "User");
+                entity.HasKey(p => p.Id);
+                entity.ToTable(name: "TB_User");
             });
 
-            builder.Entity<IdentityRole>(entity =>
+            builder.Entity<ApplicationRole>(entity =>
             {
+                entity.HasKey(p => p.Id);
                 entity.ToTable(name: "Role");
             });
-            builder.Entity<IdentityUserRole<string>>(entity =>
+            builder.Entity<IdentityUserRole<int>>(entity =>
             {
                 entity.ToTable("UserRoles");
             });
 
-            builder.Entity<IdentityUserClaim<string>>(entity =>
+            builder.Entity<IdentityUserClaim<int>>(entity =>
             {
                 entity.ToTable("UserClaims");
             });
 
-            builder.Entity<IdentityUserLogin<string>>(entity =>
+            builder.Entity<IdentityUserLogin<int>>(entity =>
             {
                 entity.ToTable("UserLogins");     
             });
 
-            builder.Entity<IdentityRoleClaim<string>>(entity =>
+            builder.Entity<IdentityRoleClaim<int>>(entity =>
             {
                 entity.ToTable("RoleClaims");
 
             });
 
-            builder.Entity<IdentityUserToken<string>>(entity =>
+            builder.Entity<IdentityUserToken<int>>(entity =>
             {
                 entity.ToTable("UserTokens");
             });

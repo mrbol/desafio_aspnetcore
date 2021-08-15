@@ -5,6 +5,15 @@
     <Version>1.1.0</Version>
 	<LangVersion>latest</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200626175731_NewSchema.cs" />
+    <Compile Remove="Migrations\20200626175731_NewSchema.Designer.cs" />
+    <Compile Remove="Migrations\20210815144947_EstruturaAlterada.cs" />
+    <Compile Remove="Migrations\20210815144947_EstruturaAlterada.Designer.cs" />
+    <Compile Remove="Migrations\20210815151447_EstruturaAlterada.cs" />
+    <Compile Remove="Migrations\20210815151447_EstruturaAlterada.Designer.cs" />
+  </ItemGroup>
 <ItemGroup>
   <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
   <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />

@@ -11,7 +11,7 @@ namespace Infrastructure.Identity.Seeds
 {
     public static class DefaultBasicUser
     {
-        public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<ApplicationRole> roleManager)
         {
             //Seed Default User
             var defaultUser = new ApplicationUser

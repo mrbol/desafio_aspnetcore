@@ -21,6 +21,7 @@ namespace WebApi.Controllers.v1
     {
         // GET: api/<controller>
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Get([FromQuery] GetAllProductsParameter filter)
         {
           
@@ -29,6 +30,7 @@ namespace WebApi.Controllers.v1
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> Get(int id)
         {
             return Ok(await Mediator.Send(new GetProductByIdQuery { Id = id }));
